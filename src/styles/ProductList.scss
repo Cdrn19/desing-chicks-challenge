@@ -1,0 +1,18 @@
+.productList__container {
+  height: auto;
+  background-color: #303141;
+  width: 100%;
+  margin: 20px auto;
+  border-radius: 5px;
+  padding: 24px;
+
+  .ProductList__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  @media (min-width: 992px) {
+    padding: 48px;
+  }
+}
