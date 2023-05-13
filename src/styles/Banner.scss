@@ -114,7 +114,8 @@
 
   @media (min-width: 1200px) {
     .banner__payments {
-      width: 1236px;
+      width: 100%;
+      max-width: 1236px;
     }
   }
 }

@@ -40,8 +40,7 @@
 
   .filters__filters:last-child {
     display: flex;
-    gap: 1px;
-    
+
     button {
       
       span {
@@ -49,13 +48,16 @@
       }
 
       &:first-child {
-        width: 50%;
+        width: calc(50% - 1px);
         background-color: rgba(76,96,133,.2);
+        border-radius: 4px 0 0 4px;
+        border-right: 1px solid #4c6085;
       }
 
       &:last-child {
         width: 50%;
-        background-color: rgba(76,96,133,.6)
+        background-color: rgba(76,96,133,.6);
+        border-radius: 0 4px 4px 0;
       }
     }
   }
@@ -69,7 +71,7 @@
     border: 0.5px;
     border-radius: 4px;
     margin-top: 5px;
-
+    
     img {
       margin: 0 16px 0 8px;
     }
@@ -79,48 +81,17 @@
       width: 503px;
     }
   }
+  
   @media (min-width: 992px) {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 234px calc(100% - 588px) 344px;
     gap: 5px;
-
-    .filters__filters {
-      button{
-        width: 234px;
-      }
-    }
-
-    .filters__bar {
-      width: 326px;
-    }
-
-    .filters__filters:last-child {
-      button {
-        span {
-          width: 20px;
-        }
-  
-        &:first-child {
-          width: 172px;
-        }
-  
-        &:last-child {
-          width: 172px;
-        }
-      }
-    }  
+ 
   }
 
   @media (min-width: 1200px) {
-    
-    .filters__filters {
-      button {
-        width: 309px;
-      }
-    }
 
-    .filters__bar {
-      width: 551px;
-    }
+    grid-template-columns: 309px calc(100% - 663px) 344px;
+
   }
 }
